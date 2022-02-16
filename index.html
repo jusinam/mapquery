@@ -23,38 +23,56 @@
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB8pHFYzhG_Fkob4qBiLo1VtSHGq81VRE&libraries=places"></script>
 
-        <!-- local script file -->
-        <script src="scripts.js"></script>
+    <!-- local script file -->
+    <script src="scripts.js"></script>
 
 </head>
 
 <body>
-<div class="container">
-    <!-- greeting message -->
-    <h1>WELCOME TO MAPQUEST</h1>
+    <div class="container">
+        <!-- greeting message -->
+        <h1>WELCOME TO MAPQUEST</h1>
 
-    <!-- brief explanation on how to use the webpage -->
-    <h2>View incidents of a region by selecting the location and clicking the GREEN button below.</h2>
+        <!-- brief explanation on how to use the webpage -->
+        <h2>View incidents of a region by selecting the location and clicking the GREEN button below.</h2>
 
         <!-- postscript -->
         <p class="text-info"><strong>NB: Unfortunately, MapQuest provides data only for cities in the
-            USA.<small></small></strong></p>
-    <div class="row">
-        <form action="">
-            <select name="list" id='selectLocation'>
-                <option value='40.7127281,-74.0060152' selected='selected'>New York</option>
-                <option value='34.0536909,-118.242766'>Los Angeles</option>
-                <option value='41.8755616,-87.6244212'>Chicago</option>
-                <option value='47.6038321,-122.3300624'>Seattle</option>
-                <option value='38.2542376,-85.759407'>Louisville</option>
-            </select>
-            <button type="button" class="btn btn-sm btn-success" onclick="loadIncidentMap()">SEE
-                INCIDENTS</button>
-        </form>
+                USA.<small></small></strong></p>
+        <div class="row">
+            <form action="">
+                <select name="list" id='selectLocation'>
+                    <option value='40.7127281,-74.0060152' selected='selected'>New York</option>
+                    <option value='34.0536909,-118.242766'>Los Angeles</option>
+                    <option value='41.8755616,-87.6244212'>Chicago</option>
+                    <option value='47.6038321,-122.3300624'>Seattle</option>
+                    <option value='38.2542376,-85.759407'>Louisville</option>
+                </select>
+                <button type="button" class="btn btn-sm btn-success" onclick="loadIncidentMap()">SEE
+                    INCIDENTS</button>
+            </form>
 
-        <div id="map" style="width:100%; height:530px;"></div>
+            <div id="map" style="width:100%; height:530px;"></div>
+        </div>
+
+        <!-- incidents description table -->
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Incident Description</th>
+                    </tr>
+                </thead>
+                <tbody id="incidents">
+                    <tr>
+                        <td id="incident"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
-
-</div>
 </body>
+
 </html>
