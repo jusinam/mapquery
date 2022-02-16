@@ -16,6 +16,11 @@ window.onload = function () {
         zoom: 12
     });
 
-    
+    L.mapquest.geocoding().geocode('New York, United States');
+    map.addLayer(L.mapquest.incidentsLayer());
+    map.addControl(L.mapquest.control());
+    // L.circle([lat, long], { radius: 2 }).addTo(map)
+
+    // map.addLayer(L.mapquest.marketsLayer());
 
 }
